@@ -1,0 +1,59 @@
+****************************************************
+
+      OpenIOC XML -> STIX XML Converter Script
+
+ Copyright (c) 2012 - The MITRE Corporation
+
+****************************************************
+
+BY USING THE OPENIOC TO STIX SCRIPT, YOU SIGNIFY YOUR ACCEPTANCE OF THE TERMS AND 
+CONDITIONS OF USE.  IF YOU DO NOT AGREE TO THESE TERMS, DO NOT USE THE SCRIPT.
+
+For more information, please refer to the terms.txt file.
+
+#################################################################
+#Generates STIX Output from an OpenIOC XML File                 #
+#Compatible with CybOX v1.0, STIX 1.0-draft2,                   #
+#and corresponding objects                                      #
+#                                                               #
+#v0.1 - BETA                                                    #
+#04/13/2012                                                     #
+#                                                               #
+#                                                               #
+#################################################################
+# CybOX - http://cybox.mitre.org                                 #
+# OpenIOC - http://www.openioc.org                              #
+#################################################################
+--------------------------------------------------------------------------------
+--Installation Notes------------------------------------------------------------
+
+Simply extract all files from the archive into your directory of choice. No external modules should be required. This script was created using Python 2.6.x, and so may not be compatible with 3.0.x.
+--------------------------------------------------------------------------------
+--Usage Notes-------------------------------------------------------------------
+
+There are four main command line parameters for this script:
+
+-i: the path to the input OpenIOC XML files
+
+-o: the path to output the STIX XML file
+
+-O: output CybOX Observables converted from OpenIOC (NOT mutually exclusive with -O)
+
+-T: output OpenIOC as the Indicator's TestMechanism (NOT mutually exclusive with -O)
+
+There are several optional parameters that may be specified before the main parameters:
+
+-n: namespace to use for IDs
+
+-p: namespace prefix to use for IDs
+
+-v: print verbose error output (tracebacks)
+
+To use the script, run the following commands:
+
+(Only needs to be run once): 
+export PYTHONPATH=stix:stix/capec:stix/cybox:stix/cvrf:stix/iodef:stix/maec:stix/oasis
+python openioc_to_stix.py -i <directory of OpenIOC xml files, ending in .ioc> -o <stix xml> [-T] [-O] [-n <namespace>] [-p <prefix>]
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
