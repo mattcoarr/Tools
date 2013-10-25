@@ -29,50 +29,50 @@ of the simpleMarking:Statement.  The marking:Controlled_Structure with its
 xpath is not used yet. 
 
 Currently we support the following top level entities and sub-entities:
-- Observables
-  -All except for Events (this is true for any embedded Observables also)
-- Indicators
-  -Title
-  -Description
-  -Valid_Time_Position
-  -Suggested_COAs
-  -Observable
-  -Composite_Indicator_Expression
-  -Indicated_TTP
-  -Kill_Chain_Phases
-  -Confidence
-- TTPs
-  -Description
-  -Intended_Effect
-  -Behavior
-  -Resources
-  -Victim_Targeting
-  -Exploit_Targets
-  -Related_TTPs
-  -Kill_Chain_Phases
-- Exploit Targets
-  -Title
-  -Vulnerability
-- Incidents
-  -Description
-  -Status
-  -Related_Observables
-  -Leveraged_TTPs
-  -Observable
-- Courses of Action
-  -All
-- Campaigns
-  -Title
-  -Status
-  -Related_Incidents
-  -Related_TTPs
-  -Related_Indicators
-- Threat Actors
-  -Title
-  -Identity
-  -Type
-  -Motivation
-  -Observed_TTPs
+- **Observables**
+  - All except for Events (this is true for any embedded Observables also)
+- **Indicators**
+  - Title
+  - Description
+  - Valid_Time_Position
+  - Suggested_COAs
+  - Observable
+  - Composite_Indicator_Expression
+  - Indicated_TTP
+  - Kill_Chain_Phases
+  - Confidence
+- **TTPs**
+  - Description
+  - Intended_Effect
+  - Behavior
+  - Resources
+  - Victim_Targeting
+  - Exploit_Targets
+  - Related_TTPs
+  - Kill_Chain_Phases
+- **Exploit Targets**
+  - Title
+  - Vulnerability
+- **Incidents**
+  - Description
+  - Status
+  - Related_Observables
+  - Leveraged_TTPs
+  - Observable
+- **Courses of Action**
+  - All
+- **Campaigns**
+  - Title
+  - Status
+  - Related_Incidents
+  - Related_TTPs
+  - Related_Indicators
+- **Threat Actors**
+  - Title
+  - Identity
+  - Type
+  - Motivation
+  - Observed_TTPs
 
 Each category of top level "items" is turned into a main table on the page.
 The item itself is expandable and other nested content pointing to other
@@ -111,23 +111,23 @@ STIX - http://stix.mitre.org
 
 ## Included Files
 
- * README: this file.
- * stix_to_html.xsl: the top-level STIX XML to HTML XSL Transform.
- * stix_to_hmtl__customized.xsl: [not required] example of how to use the stix
+ - **README**: this file.
+ - **stix_to_html.xsl**: the top-level STIX XML to HTML XSL Transform.
+ - **stix_to_hmtl__customized.xsl**: [not required] example of how to use the stix
    stylesheet and override the default title, header, footer, and css to
    customize the output.
- * cybox_common.xsl: common CybOX transformations used by stix_to_html.xsl.
- * stix_common.xsl: common stix transformations used by stix_to_html.xsl.
- * normalize.xsl: used by stix
- * icons.xsl: stylesheet code to read in the svg icons for the main item type logos
- * common.js: common javascript code
- * wgxpath.install.css: xpath support in javascript for browsers that don't
+ - **cybox_common.xsl**: common CybOX transformations used by stix_to_html.xsl.
+ - **stix_common.xsl**: common stix transformations used by stix_to_html.xsl.
+ - **normalize.xsl**: used by stix
+ - **icons.xsl**: stylesheet code to read in the svg icons for the main item type logos
+ - **common.js**: common javascript code
+ - **wgxpath.install.js**: xpath support in javascript for browsers that don't
    support it (IE)  
    [source: http://code.google.com/p/wicked-good-xpath/]
- * common.css: common css styles
- * theme_default.css: css styles used for main item type background colors
+ - **common.css**: common css styles
+ - **theme_default.css**: css styles used for main item type background colors
    (observables, ttps, indicators, etc)
- * images/*.svg and *.svgz: svg vector images for the main item type logos
+ - **images/*.svg and *.svgz**: svg vector images for the main item type logos
    (the *.svg files are used and pulled in via the xsl and included in the
    output html inline)
 
