@@ -111,25 +111,25 @@ STIX - http://stix.mitre.org
 
 ## Included Files
 
-README: this file.
-stix_to_html.xsl: the top-level STIX XML to HTML XSL Transform.
-stix_to_hmtl__customized.xsl: [not required] example of how to use the stix
-  stylesheet and override the default title, header, footer, and css to
-  customize the output.
-cybox_common.xsl: common CybOX transformations used by stix_to_html.xsl.
-stix_common.xsl: common stix transformations used by stix_to_html.xsl.
-normalize.xsl: used by stix
-icons.xsl: stylesheet code to read in the svg icons for the main item type logos
-common.js: common javascript code
-wgxpath.install.css: xpath support in javascript for browsers that don't
-  support it (IE)
-  [source: http://code.google.com/p/wicked-good-xpath/]
-common.css: common css styles
-theme_default.css: css styles used for main item type background colors
-  (observables, ttps, indicators, etc)
-images/*.svg and *.svgz: svg vector images for the main item type logos
-  (the *.svg files are used and pulled in via the xsl and included in the
-  output html inline)
+ * README: this file.
+ * stix_to_html.xsl: the top-level STIX XML to HTML XSL Transform.
+ * stix_to_hmtl__customized.xsl: [not required] example of how to use the stix
+   stylesheet and override the default title, header, footer, and css to
+   customize the output.
+ * cybox_common.xsl: common CybOX transformations used by stix_to_html.xsl.
+ * stix_common.xsl: common stix transformations used by stix_to_html.xsl.
+ * normalize.xsl: used by stix
+ * icons.xsl: stylesheet code to read in the svg icons for the main item type logos
+ * common.js: common javascript code
+ * wgxpath.install.css: xpath support in javascript for browsers that don't
+   support it (IE)  
+   [source: http://code.google.com/p/wicked-good-xpath/]
+ * common.css: common css styles
+ * theme_default.css: css styles used for main item type background colors
+   (observables, ttps, indicators, etc)
+ * images/*.svg and *.svgz: svg vector images for the main item type logos
+   (the *.svg files are used and pulled in via the xsl and included in the
+   output html inline)
 
 ## Usage Notes
 
