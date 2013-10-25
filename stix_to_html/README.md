@@ -1,20 +1,19 @@
-****************************************************
+# STIX XML -> HTML Transform v1
 
-      STIX XML -> HTML Transform v1
+~~~
+Copyright (c) 2013 - The MITRE Corporation
+All rights reserved. See LICENSE.txt for complete terms.
+~~~
 
- Copyright (c) 2013 - The MITRE Corporation
- All rights reserved. See LICENSE.txt for complete terms.
-
-****************************************************
-
+~~~
 BY USING THE STIX XML to HTML TRANSFORM, YOU SIGNIFY YOUR ACCEPTANCE OF THE 
 TERMS AND CONDITIONS OF USE.  IF YOU DO NOT AGREE TO THESE TERMS, DO NOT USE 
 THE STIX XML to HTML TRANSFORM.
 
 For more information, please refer to the terms.txt file.
+~~~
 
-#################################################################
-STIX XML to HTML transform v1.0beta2
+## STIX XML to HTML transform v1.0beta2
 Compatible with STIX v1.0.1
 
 This is an xslt to transform a stix 1.0/1.0.1 document containing metadata and
@@ -31,49 +30,49 @@ xpath is not used yet.
 
 Currently we support the following top level entities and sub-entities:
 - Observables
-  --All except for Events (this is true for any embedded Observables also)
+  -All except for Events (this is true for any embedded Observables also)
 - Indicators
-  --Title
-  --Description
-  --Valid_Time_Position
-  --Suggested_COAs
-  --Observable
-  --Composite_Indicator_Expression
-  --Indicated_TTP
-  --Kill_Chain_Phases
-  --Confidence
+  -Title
+  -Description
+  -Valid_Time_Position
+  -Suggested_COAs
+  -Observable
+  -Composite_Indicator_Expression
+  -Indicated_TTP
+  -Kill_Chain_Phases
+  -Confidence
 - TTPs
-  --Description
-  --Intended_Effect
-  --Behavior
-  --Resources
-  --Victim_Targeting
-  --Exploit_Targets
-  --Related_TTPs
-  --Kill_Chain_Phases
+  -Description
+  -Intended_Effect
+  -Behavior
+  -Resources
+  -Victim_Targeting
+  -Exploit_Targets
+  -Related_TTPs
+  -Kill_Chain_Phases
 - Exploit Targets
-  --Title
-  --Vulnerability
+  -Title
+  -Vulnerability
 - Incidents
-  --Description
-  --Status
-  --Related_Observables
-  --Leveraged_TTPs
-  --Observable
+  -Description
+  -Status
+  -Related_Observables
+  -Leveraged_TTPs
+  -Observable
 - Courses of Action
-  --All
+  -All
 - Campaigns
-  --Title
-  --Status
-  --Related_Incidents
-  --Related_TTPs
-  --Related_Indicators
+  -Title
+  -Status
+  -Related_Incidents
+  -Related_TTPs
+  -Related_Indicators
 - Threat Actors
-  --Title
-  --Identity
-  --Type
-  --Motivation
-  --Observed_TTPs
+  -Title
+  -Identity
+  -Type
+  -Motivation
+  -Observed_TTPs
 
 Each category of top level "items" is turned into a main table on the page.
 The item itself is expandable and other nested content pointing to other
@@ -95,20 +94,22 @@ requirements:
  - XSLT 2.0 engine (this has been tested with Saxon 9.5)
  - a STIX 1.0/1.0.1 input xml document
 
-current release:
-v1.0beta2
-2013-10-24
-https://github.com/STIXProject/Tools/issues?milestone=1&state=open
+## Releases
+### current release
+ * v1.0beta2  
+   2013-10-24  
+   https://github.com/STIXProject/Tools/issues?milestone=1&state=open
 
-previous releases:
-v1.0beta1
-2013-08-28
+### previous releases
+ * v1.0beta1  
+   2013-08-28
 
+
+## More inforation on STIX
 
 STIX - http://stix.mitre.org
-#################################################################
---------------------------------------------------------------------------------
---Included Files----------------------------------------------------------------
+
+## Included Files
 
 README: this file.
 stix_to_html.xsl: the top-level STIX XML to HTML XSL Transform.
@@ -130,8 +131,8 @@ images/*.svg and *.svgz: svg vector images for the main item type logos
   (the *.svg files are used and pulled in via the xsl and included in the
   output html inline)
 
---------------------------------------------------------------------------------
---Usage Notes-------------------------------------------------------------------
+## Usage Notes
+
 Use with your favorite XML Editor or XSLT 2.0 interpreter (e.g. Saxon).
 
 Here are commands to run a single document or multiple documents through the
@@ -139,18 +140,19 @@ stylesheet with Saxon.
 
 Single file:
 
+~~~
   java -jar /opt/saxon/saxon9he.jar -xsl:xslt/stix_to_html.xsl -s:input.xml -o:output.html
+~~~
 
 Directory of files ("inputdir" and "outputdir" are directories):
 
+~~~
   java -jar /opt/saxon/saxon9he.jar -xsl:stix_to_html.xsl -s:inputdir -o:outputdir
-  
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
+~~~
 
-#################################################################
-Customization
-#################################################################
+
+## Customization
+
 The header, footer, title, and css can easily be customized.
 
 Inside stix_to_html.xsl there are three corresponding named templates:
@@ -192,5 +194,3 @@ stix:STIX_Header contents) is dislayed.
 (and other similary formatted data elements) will be displayed.  This includes
 such information what type of matching is performed (equals or string match).
 
-#################################################################
-#################################################################
